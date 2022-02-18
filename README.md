@@ -1,2 +1,4 @@
+MinkeBox
+---
 
-https://raw.githubusercontent.com/minkebox/repo/master/install.sh | sh
+```curl https://raw.githubusercontent.com/minkebox/repo/master/install.sh | sh```
