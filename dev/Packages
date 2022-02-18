@@ -4,10 +4,10 @@ Architecture: all
 Maintainer: tim.j.wilkinson@gmail.com
 Installed-Size: 18
 Filename: dev/main/binary-all/minkebox_1.0.0-1_all.deb
-Size: 2584
-MD5sum: ac237f0c4209468d65af9b23d1e72cc9
-SHA1: 652fba0fee4cb8854ba8eacd5e4cb4ae1ecb79ab
-SHA256: a1dc158622eb9c70d6185015f41085a780bd790beed55614b851ebb0b4014579
+Size: 2580
+MD5sum: fe4ddde5104d9512124409828a014471
+SHA1: 8f1f8851ad2c659d7f5f2018a48bbd77a196dd9e
+SHA256: aa8cb257907d2f49bdf306d06e2fc61cc3dd55183ba860a590833c911d692adc
 Section: main
 Priority: optional
 Homepage: https://www.minkebox.com

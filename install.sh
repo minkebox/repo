@@ -5,6 +5,7 @@ BRIDGE=br0
 INTERFACES=/etc/network/interfaces
 DHCPCD=/etc/dhcpcd.conf
 NETDEV=/etc/systemd/network
+REBOOT=0
 
 echo "*** Checking for MinkeBox"
 if [ -f /usr/bin/minkebox ]; then
@@ -56,8 +57,6 @@ else
         GW=$(ip route show default | sed "s/^.*via \([0-9.]*\) .*$/\1/")
         DHCP=$(grep -c "iface ${ETH} inet dhcp" ${INTERFACES})
 
-        ifdown ${ETH}
-
         # Generate new interfaces
         cat > ${INTERFACES} <<__EOF__
 # This file describes the network interfaces available on your system
@@ -91,7 +90,7 @@ iface ${BRIDGE} inet dhcp
 __EOF__
         fi
 
-        ifup ${BRIDGE}
+        REBOOT=1
 
     elif [ "${NETCOUNT}" != "0" ]; then
         echo ">>> Not clever enough to understand the network configuration on this machine."
@@ -127,6 +126,8 @@ __EOF__
             echo "interfaces ${BRIDGE}" >> /tmp/dhcpcd
             cat /tmp/dhcpcd > ${DHCPCD}
             rm /tmp/dhcpcd
+
+            REBOOT=1
         fi
     fi
 fi
@@ -137,10 +138,16 @@ fi
 echo "*** Installing MinkeBox package"
 rm -f /usr/share/keyrings/minkebox-keyring.gpg /etc/apt/sources.list.d/minkebox.list
 curl -fsSL https://raw.githubusercontent.com/minkebox/repo/master/KEY.gpg | gpg --dearmor -o /usr/share/keyrings/minkebox-keyring.gpg
-echo "deb https://raw.githubusercontent.com/minkebox/repo/master/ dev/" > /etc/apt/sources.list.d/minkebox.list
+echo "deb [signed-by=/usr/share/keyrings/minkebox-keyring.gpg] https://raw.githubusercontent.com/minkebox/repo/master/ dev/" > /etc/apt/sources.list.d/minkebox.list
 apt update
 apt install -y minkebox
 
 echo "*** MinkeBox successfully installed and running"
+
+if [ "${REBOOT}" = "1" ]; then
+    echo "***"
+    echo "*** The network has been reconfigured. Please REBOOT so these changes can take effect."
+    echo "***"
+fi
 
 exit 0
