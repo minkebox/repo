@@ -1,0 +1,20 @@
+Codename: dev/
+Label: MinkeBox
+Origin: minkebox
+Date: Fri, 18 Feb 2022 03:00:25 +0000
+MD5Sum:
+ c9d79cba14d3f7f527439ec3827973d5              443 Packages
+ 2622c765b4b0d7d7d4774e781efa3616              348 Packages.gz
+ 9d358071fc389392f50c1f6c1c47895f               86 Release
+SHA1:
+ 7c5a99a56ca6c342a29ec104c42a891336660919              443 Packages
+ 14334b9e58b71a1f3764cbbeba63ee8798b67ddd              348 Packages.gz
+ ecaae333889b59ad6dd973874240ff6474397f8b               86 Release
+SHA256:
+ 1e9d2f9efd7ff68bd13758abee8cb19c2c5398d36807cf78433c9836626c138e              443 Packages
+ 8f7cb627cea555c9b6a953ddff1fb14bccd8c6f5382c10783026eeef8be85213              348 Packages.gz
+ afe598d1d8af4be644d1246602df5169313d67d61f41e0e937fc91da4d8d3802               86 Release
+SHA512:
+ 054dd0df171254be5dbf666b5d1c3805d697f7169b9ab8a6a96255fe6639e82e4fb725496d80263f8dd8ca16af0f071e2a566729f10aa585311a3431ae7f236d              443 Packages
+ bebaad0a9f3b6a23535585a0fb24f3c1c49df73bd709a4e6998990d174935db710bb4f85ef5931d055ee05701e63fcda345410222251b4e2a8cf69e7e8d5a8eb              348 Packages.gz
+ 837f0d9106b2123c8b5219c648a1e64958681c49d294df071470eb5455ad01d9e798d4a76bcbc2f506658755f66fed3a18c4f8657ea0f22e80dd0a899b2be038               86 Release

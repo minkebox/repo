@@ -1,0 +1,15 @@
+Package: minkebox
+Version: 1.0.0-1
+Architecture: all
+Maintainer: tim.j.wilkinson@gmail.com
+Installed-Size: 18
+Filename: dev/main/binary-all/minkebox_1.0.0-1_all.deb
+Size: 2584
+MD5sum: ac237f0c4209468d65af9b23d1e72cc9
+SHA1: 652fba0fee4cb8854ba8eacd5e4cb4ae1ecb79ab
+SHA256: a1dc158622eb9c70d6185015f41085a780bd790beed55614b851ebb0b4014579
+Section: main
+Priority: optional
+Homepage: https://www.minkebox.com
+Description: MinkeBox Docker Manager
+
